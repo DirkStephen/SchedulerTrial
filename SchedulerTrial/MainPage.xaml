@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SchedulerTrial.MainPage"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             xmlns:local="clr-namespace:SchedulerTrial">
+
+    <scheduler:SfScheduler View="Month"
+                           TodayHighlightBrush="Red"
+                           AppointmentsSource="{Binding SchedulerEvents}">
+        <scheduler:SfScheduler.BindingContext>
+            <local:ControlViewModel></local:ControlViewModel>
+        </scheduler:SfScheduler.BindingContext>s
+        <!--AllowedViews="Agenda,Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineMonth,TimelineWorkWeek-->
+    </scheduler:SfScheduler>
+
+    <!--<DatePicker MinimumDate="{Binding MinDate}"
+            MaximumDate="{Binding Maxdate}"
+            Date="{Binding SelectedDate}">
+    </DatePicker>-->
+    
+    <!--<TimePicker Time = "{Binding Selected Time}"-->
+    
+</ContentPage>
